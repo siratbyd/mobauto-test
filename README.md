@@ -1,6 +1,9 @@
 # Mobile Test Automation Framework
 
 A robust and scalable mobile test automation framework built with Java, Appium, and Cucumber, supporting both Android and iOS platforms.
+Before the starting you can check this article who has written from my brother for more detailed information about Java, TestNG, Appium and more:
+https://medium.com/@bakicanboydas/java-testng-appium-and-more-e343365e5bc2
+
 
 ## 🚀 Features
 
@@ -147,3 +150,4 @@ public void iAmOnLoginScreen() {
 * Commit your changes
 * Push to the branch
 * Create a Pull Request
+
