@@ -19,13 +19,13 @@ A robust and scalable mobile test automation framework built with Java, Appium, 
 
 ## 🛠️ Tech Stack
 
-* Java 11
+* Java 
 * Maven
-* Appium 9.1.0
-* Cucumber 7.15.0
-* TestNG 7.8.0
-* Allure 2.24.0
-* Log4j2 2.22.1
+* Appium 
+* Cucumber 
+* TestNG 
+* Allure 
+* Log4j2 
 
 ## 📋 Prerequisites
 
@@ -39,15 +39,15 @@ A robust and scalable mobile test automation framework built with Java, Appium, 
 
 ### Clone the repository
 
-\```
+```
 git clone https://github.com/yourusername/mobile-automation-framework.git
-\```
+```
 
 ### Install dependencies
 
-\```
+```
 mvn clean install
-\```
+```
 
 ### Configure test environment
 * Update `config.properties` with your device details
@@ -56,35 +56,35 @@ mvn clean install
 
 ## 🏃 Run tests
 
-\```
+```
 mvn test -Dplatform=android
-\```
+```
 
-\```
+```
 mvn test -Dplatform=ios
-\```
+```
 
 ## 📊 Test Reports
 
 ### Generate Allure reports after test execution:
 
-\```
+```
 mvn allure:serve
-\```
+```
 
 ## 🔧 Configuration
 
 ### Device Configuration
 
-\```
+```
 config.properties
 platform=android
 appPath=/path/to/app
-\```
+```
 
 ### Test Configuration
 
-\```
+```
 <!-- testng.xml -->
 <suite name="Test Suite">
     <test name="Android Tests">
@@ -92,28 +92,28 @@ appPath=/path/to/app
         ...
     </test>
 </suite>
-\```
+```
 
 ## 📝 Writing Tests
 
 ### Feature File
 
-\```
+```
 Feature: Login Functionality
   Scenario: Successful login
     Given I am on login screen
     When I enter valid credentials
     Then I should see the home screen
-\```
+```
 
 ### Step Definition
 
-\```
+```
 @Given("I am on login screen")
 public void iAmOnLoginScreen() {
     // Implementation
 }
-\```
+```
 
 ## ✨ Best Practices
 
