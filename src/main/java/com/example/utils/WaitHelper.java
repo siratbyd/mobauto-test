@@ -11,7 +11,7 @@ public class WaitHelper {
     private WebDriverWait wait;
 
     public WaitHelper(WebDriver driver) {
-        wait = new WebDriverWait(driver, Duration.ofSeconds(Integer.parseInt(ConfigReader.getProperty("test.timeout"))));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(30));
     }
 
     public WebElement waitForElementVisible(WebElement element) {

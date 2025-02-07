@@ -1,8 +1,10 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Allure Suite" verbose="1">
+<suite name="Allure Suite" parallel="tests" thread-count="3">
     <listeners>
         <listener class-name="com.example.listeners.AllureListener"/>
     </listeners>
+    <parameter name="platform" value="android"/>
+    <parameter name="appPath" value="/path/to/app.apk"/>
     <test name="Android Tests">
         <parameter name="platform" value="android"/>
         <classes>

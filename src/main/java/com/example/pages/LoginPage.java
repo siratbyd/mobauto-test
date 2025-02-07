@@ -6,18 +6,19 @@ import java.util.Objects;
 import com.example.utils.ConfigReader;
 import org.openqa.selenium.WebDriver;
 import io.qameta.allure.Step;
+import io.appium.java_client.AppiumDriver;
 
 public class LoginPage extends BasePage {
     
-    public WebDriver getDriver() {
+    public AppiumDriver getDriver() {
         return driver;
     }
 
     // Platforma özel locator'lar
     public By usernameField() {
-        return Objects.equals(ConfigReader.getPlatform(), "android") ?
-            AppiumBy.xpath("//android.widget.EditText[@resource-id='username']") :
-            AppiumBy.xpath("//XCUIElementTypeTextField[@name='Username']");
+        return ConfigReader.getPlatform().equalsIgnoreCase("android") ?
+            AppiumBy.accessibilityId("username") :
+            AppiumBy.iOSClassChain("**/XCUIElementTypeTextField[`name == 'Username'`]");
     }
 
     public By passwordField() {

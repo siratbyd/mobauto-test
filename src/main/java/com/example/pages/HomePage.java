@@ -3,6 +3,10 @@ package com.example.pages;
 import io.appium.java_client.AppiumBy;
 import org.openqa.selenium.By;
 import java.util.Objects;
+import com.example.utils.ConfigReader;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import java.time.Duration;
 
 public class HomePage extends BasePage {
     
@@ -13,6 +17,7 @@ public class HomePage extends BasePage {
     }
 
     public String getWelcomeText() {
-        return waitHelper.waitForElementVisible(getDriver().findElement(welcomeMessage())).getText();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(welcomeMessage())).getText();
     }
 } 
